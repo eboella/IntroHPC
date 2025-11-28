@@ -1,0 +1,36 @@
+# root installation directory
+set rootdir_name /home/eboella/prod/opt/applications/nmap/7.95/Linux_amd/gcc-11.4.1
+
+# automatically added environment variables:
+# These variables *must* be defined! Please, check & uncomment
+setenv SCOREP_HOME	"$rootdir_name"
+setenv SCOREP_LIB	"$rootdir_name/lib"
+setenv SCOREP_INC	"$rootdir_name/include"
+setenv SCOREP_INCLUDE	"$rootdir_name/include"
+
+# required environment variables:
+
+
+# actions on default environment variables:
+ prepend-path PATH     "$rootdir_name/bin"
+ prepend-path LIBPATH  "$rootdir_name/lib"
+ prepend-path LD_LIBRARY_PATH  "$rootdir_name/lib"
+# prepend-path MANPATH  "$rootdir_name/man"
+
+module-whatis "SCOREP" 
+
+proc ModulesHelp {} {
+  puts stderr "modulefile \"[module-info name]\""
+  puts stderr {
+module name: 
+creation/update date: 20181122 14:16:09
+
+comment: None.
+
+brief description: scorep
+
+}
+  return 0
+}
+
+
